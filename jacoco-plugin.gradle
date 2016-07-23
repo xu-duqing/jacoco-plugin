@@ -35,4 +35,7 @@ task jacocoTestReport(type:JacocoReport, dependsOn: "testDebugUnitTest") {
         html.enabled = true
         html.destination = "${buildDir}/reports/jacoco"
     }
+    doLast{
+        println "查看报表:file://${buildDir}/reports/jacoco/index.html"
+    }
 }
